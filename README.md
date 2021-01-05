@@ -110,7 +110,7 @@ The picture below shows captured **7 KHz** sine wave signal generated with the p
 
 ![Go to the import view](https://github.com/PavolKostolansky/STM32H7_MulticoreFIR/blob/main/Docs/Images/Period7KHzGenerator.PNG?raw=true)
 
-The picture below shows captured **7 KHz** sine wave signal generated with the previously mentioned signal generator but this time it goes through microcontroller and FIR algorithm. Despite that, the signal should have the same amplitude because the FIR filter is a low pass with the 192 kHz cutoff frequency. 
+The picture below shows captured **7 KHz** sine wave signal generated with the previously mentioned signal generator but this time it goes through microcontroller and FIR algorithm. Despite that, the signal should have the same amplitude because the FIR filter is a low pass with the **20 kHz** cutoff frequency. 
 
 ![Go to the import view](https://github.com/PavolKostolansky/STM32H7_MulticoreFIR/blob/main/Docs/Images/20KHzCutoff_TestedPeriod7KHz.PNG?raw=true)
 
