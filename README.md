@@ -14,8 +14,10 @@ STM32H7 Multicore FIR is a finite impulse response filter implementation for a f
 - [On target tests](#on-target-tests)
 	- [Test configuration](#test-configuration)
 	- [Timing](#timing)
-	- [Filter Tests](#frequency-cutoff)
+	- [Filter Tests](#Filter-tests)
 	  	- [15 KHz Low Pass Filter](#15-KHz-Low-Pass-filter)
+	  	- [5 KHz High Pass Filter](#5-KHz-High-Pass-filter)
+	  	- [2KHz - 18KHz Band Pass filter](#2KHz--18KHz-Band-Pass-filter)
 - [License](#license)
 - [Links](#links)
 
@@ -101,7 +103,7 @@ Measurement was made with a logic analyzer. On the picture below you can see FIR
 
 ![Go to the import view](https://github.com/PavolKostolansky/STM32H7_MulticoreFIR/blob/main/Docs/Images/measurementOfFIRCalculation.PNG?raw=true)
 
-### Frequency cutoff
+### Filter Tests
 Measurement was made with the soundcard (192KHz sampling frequency and 32-bit resolution). Despite that, the results are not so exact and it would be good to redo measurement with an oscilloscope.
 
 Signal was generated with [JDS2800 Signal Generator Digital Control Dual-channel DDS Function Signal Generator](https://www.banggood.com/JDS2800-15MHZ-40MHZ-60MHZ-Signal-Generator-Digital-Control-Dual-channel-DDS-Function-Signal-Generato-p-1353873.html?cur_warehouse=CN&ID=556909). 
