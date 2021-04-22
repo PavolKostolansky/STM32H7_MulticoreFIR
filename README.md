@@ -140,7 +140,7 @@ The picture below shows captured **5 KHz** HP filter magnitude response simulate
 
 ![Go to the import view](https://github.com/PavolKostolansky/STM32H7_MulticoreFIR/blob/main/Docs/Images/5KhzCutoff.png?raw=true)
 
-#### 2KHz - 18KHz Band Pass filter
+#### 2KHz 18KHz Band Pass filter
 The measurement was made with **[STM32H7_MulticoreFIR release v1.0.0](https://github.com/PavolKostolansky/STM32H7_MulticoreFIR/releases/tag/v1.0.0)** and eval board **[NUCLEO-H755ZI-Q](https://www.st.com/en/evaluation-tools/nucleo-h755zi-q.html)**
 > Core M7: 480 MHz
 > Core M4: 240 MHz
