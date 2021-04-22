@@ -87,7 +87,6 @@ The measurement was made with **[STM32H7_MulticoreFIR release v1.0.0](https://gi
 > Core M7: 480 MHz
 > Core M4: 240 MHz
 > Filter Order: 45
-> Cutoff frequency: 20 KHz low pass filter
 > Splitter : 35
 > ADC1 resolution : 16 bit
 > DAC1 resolution : 12 bit
@@ -106,29 +105,54 @@ Measurement was made with the soundcard (192KHz sampling frequency and 32-bit re
 
 Signal was generated with [JDS2800 Signal Generator Digital Control Dual-channel DDS Function Signal Generator](https://www.banggood.com/JDS2800-15MHZ-40MHZ-60MHZ-Signal-Generator-Digital-Control-Dual-channel-DDS-Function-Signal-Generato-p-1353873.html?cur_warehouse=CN&ID=556909). 
 
-The picture below shows captured **7 KHz** sine wave signal generated with the previously mentioned signal generator. 
+#### 15 KHz Low Pass filter
+The measurement was made with **[STM32H7_MulticoreFIR release v1.0.0](https://github.com/PavolKostolansky/STM32H7_MulticoreFIR/releases/tag/v1.0.0)** and eval board **[NUCLEO-H755ZI-Q](https://www.st.com/en/evaluation-tools/nucleo-h755zi-q.html)**
+> Core M7: 480 MHz
+> Core M4: 240 MHz
+> Filter Order: 45
+> Cutoff frequency: 15 KHz low pass filter
+> Splitter : 35
+> ADC1 resolution : 16 bit
+> DAC1 resolution : 12 bit
+> Sampling frequency: 192 KHz
+> FIR – Taylor Window, Nbar 4, Sidelobe Level 30
 
-![Go to the import view](https://github.com/PavolKostolansky/STM32H7_MulticoreFIR/blob/main/Docs/Images/Period7KHzGenerator.PNG?raw=true)
+The picture below shows captured **15 KHz** LP filter magnitude response simulated in Matlab and measured on real hardware with soundcard oscilloscope. 
 
-The picture below shows captured **7 KHz** sine wave signal generated with the previously mentioned signal generator but this time it goes through microcontroller and FIR algorithm. Despite that, the signal should have the same amplitude because the FIR filter is a low pass with the **20 kHz** cutoff frequency. 
+![Go to the import view](https://github.com/PavolKostolansky/STM32H7_MulticoreFIR/blob/main/Docs/Images/15KhzCutoff.PNG?raw=true)
 
-![Go to the import view](https://github.com/PavolKostolansky/STM32H7_MulticoreFIR/blob/main/Docs/Images/20KHzCutoff_TestedPeriod7KHz.PNG?raw=true)
+#### 5 KHz High Pass filter
+The measurement was made with **[STM32H7_MulticoreFIR release v1.0.0](https://github.com/PavolKostolansky/STM32H7_MulticoreFIR/releases/tag/v1.0.0)** and eval board **[NUCLEO-H755ZI-Q](https://www.st.com/en/evaluation-tools/nucleo-h755zi-q.html)**
+> Core M7: 480 MHz
+> Core M4: 240 MHz
+> Filter Order: 45
+> Cutoff frequency: 5 KHz high pass filter
+> Splitter : 35
+> ADC1 resolution : 16 bit
+> DAC1 resolution : 12 bit
+> Sampling frequency: 192 KHz
+> FIR – Taylor Window, Nbar 4, Sidelobe Level 30
 
-The picture below shows spectrum analysis of **20 KHz** sine wave signal generated with the previously mentioned signal generator that goes through microcontroller and FIR algorithm. 
-The signal parameters are:
-- 20 004.3 Hz
-- 26.9 dB
+The picture below shows captured **5 KHz** HP filter magnitude response simulated in Matlab and measured on real hardware with soundcard oscilloscope. 
 
-![Go to the import view](https://github.com/PavolKostolansky/STM32H7_MulticoreFIR/blob/main/Docs/Images/20KHzCutoff_TestedPeriod20KHzSpectrum.PNG?raw=true)
+![Go to the import view](https://github.com/PavolKostolansky/STM32H7_MulticoreFIR/blob/main/Docs/Images/5KhzCutoff.png?raw=true)
 
-The picture below shows spectrum analysis of **21 KHz** sine wave signal generated with the previously mentioned signal generator that goes through microcontroller and FIR algorithm. 
-The signal parameters are:
-- 20 994.9 Hz
-- 21.2 dB
+#### 2KHz - 18KHz Band Pass filter
+The measurement was made with **[STM32H7_MulticoreFIR release v1.0.0](https://github.com/PavolKostolansky/STM32H7_MulticoreFIR/releases/tag/v1.0.0)** and eval board **[NUCLEO-H755ZI-Q](https://www.st.com/en/evaluation-tools/nucleo-h755zi-q.html)**
+> Core M7: 480 MHz
+> Core M4: 240 MHz
+> Filter Order: 45
+> Cutoff frequency: 2KHz - 18KHz band pass filter
+> Splitter : 35
+> ADC1 resolution : 16 bit
+> DAC1 resolution : 12 bit
+> Sampling frequency: 192 KHz
+> FIR – Taylor Window, Nbar 4, Sidelobe Level 30
 
-![Go to the import view](https://github.com/PavolKostolansky/STM32H7_MulticoreFIR/blob/main/Docs/Images/20KHzCutoff_TestedPeriod21KHzSpectrum.PNG?raw=true)
+The picture below shows captured **2KHz - 18KHz** BP filter magnitude response simulated in Matlab and measured on real hardware with soundcard oscilloscope. 
 
-As you can see the decrease between the **20 KHz** and **21 KHz** is 5.7 dB.
+![Go to the import view](https://github.com/PavolKostolansky/STM32H7_MulticoreFIR/blob/main/Docs/Images/BandPass.PNG?raw=true)
+
 
 ## License
 
