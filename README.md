@@ -17,7 +17,7 @@ STM32H7 Multicore FIR is a finite impulse response filter implementation for a f
 	- [Filter Tests](#Filter-tests)
 	  	- [15 KHz Low Pass Filter](#15-KHz-Low-Pass-filter)
 	  	- [5 KHz High Pass Filter](#5-KHz-High-Pass-filter)
-	  	- [2KHz - 18KHz Band Pass filter](#2KHz--18KHz-Band-Pass-filter)
+	  	- [2KHz - 18KHz Band Pass filter](#2KHz-18KHz-Band-Pass-filter)
 - [License](#license)
 - [Links](#links)
 
